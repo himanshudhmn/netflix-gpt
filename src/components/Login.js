@@ -8,8 +8,9 @@ import {
 } from "firebase/auth";
 import { auth } from "../utils/firebase";
 import { useNavigate } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { addUser } from "../utils/userSlice";
+import { BG_IMG } from "../utils/constants";
 
 const Login = (props) => {
   const navigate = useNavigate();
@@ -92,10 +93,7 @@ const Login = (props) => {
     <div>
       <Header />
       <div className="absolute">
-        <img
-          src="https://assets.nflxext.com/ffe/siteui/vlv3/74d734ca-0eab-4cd9-871f-bca01823d872/web/IN-en-20241021-TRIFECTA-perspective_2277eb50-9da3-4fdf-adbe-74db0e9ee2cf_large.jpg"
-          alt="background-img"
-        />
+        <img src={BG_IMG} alt="background-img" />
       </div>
       <form
         className="absolute bg-black p-12 w-3/12 my-36 mx-auto right-0 left-0 text-white rounded-lg bg-opacity-70"
