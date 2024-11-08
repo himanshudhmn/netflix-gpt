@@ -100,7 +100,7 @@ const Login = (props) => {
         />
       </div>
       <form
-        className="absolute bg-black p-12 w-9/12 md:w-3/12 my-52 md:my-36 mx-auto right-0 left-0 text-white rounded-lg bg-opacity-70"
+        className="absolute bg-black p-6 md:p-12 w-11/12 md:w-3/12 my-44 md:my-36 mx-auto right-0 left-0 text-white rounded-lg bg-opacity-70"
         onClick={(e) => e.preventDefault()}
       >
         <h1 className="font-bold text-3xl pb-6">
