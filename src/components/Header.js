@@ -52,10 +52,10 @@ const Header = (props) => {
     dispatch(changeLanguage(e.target.value));
   };
   return (
-    <div className="absolute px-8 py-2 bg-gradient-to-b from-black w-full z-10 flex justify-between">
-      <img className="w-44" src={LOGO} alt="logo" />
+    <div className="absolute px-8 py-2 bg-gradient-to-b from-black w-full z-10 flex flex-col md:flex-row justify-between ">
+      <img className="w-44 mx-auto md:mx-0" src={LOGO} alt="logo" />
       {user && (
-        <div className="flex items-center">
+        <div className="flex items-center justify-between">
           {showGPTSearch && (
             <select
               onChange={handleLangChange}
@@ -75,13 +75,15 @@ const Header = (props) => {
           >
             {showGPTSearch ? "Homepage" : "GPT Search"}
           </button>
-          <img className="w-10 h-10 " src={AVATAR} alt="user" />
-          <button
-            className="font-bold text-white px-4 cursor-pointer"
-            onClick={handleSignOut}
-          >
-            Sign Out
-          </button>
+          <div className="flex">
+            <img className="w-10 h-10 " src={AVATAR} alt="user" />
+            <button
+              className="font-bold text-white px-4 cursor-pointer"
+              onClick={handleSignOut}
+            >
+              Sign Out
+            </button>
+          </div>
         </div>
       )}
     </div>
