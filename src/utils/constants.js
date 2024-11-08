@@ -11,8 +11,7 @@ export const API_OPTIONS = {
   method: "GET",
   headers: {
     accept: "application/json",
-    Authorization:
-      "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIwYmY0ZTkwZGQyZmJiNzU4NmRkOWFiYmU1YWJjZDQ0OCIsIm5iZiI6MTczMDIyODQwNy4wMTQ4NzExLCJzdWIiOiI2NzIxMmJlMWZlMmE4YTAxMWVkNzAxN2YiLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.KxJqsSfOaAVywCC1zqvnGaRDpiHeKgr3v3Ap7ZipEDE",
+    Authorization: "Bearer " + process.env.REACT_APP_TMDB_KEY,
   },
 };
 
@@ -21,3 +20,5 @@ export const laguageSelector = [
   { key: "hindi", displayName: "Hindi" },
   { key: "french", displayName: "French" },
 ];
+
+export const OPEN_AI_KEY = process.env.REACT_APP_OPEN_AI_KEY;
