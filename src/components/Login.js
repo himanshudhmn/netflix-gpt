@@ -93,10 +93,14 @@ const Login = (props) => {
     <div>
       <Header />
       <div className="absolute">
-        <img src={BG_IMG} alt="background-img" />
+        <img
+          src={BG_IMG}
+          alt="background-img"
+          className="h-screen object-cover md:h-fit"
+        />
       </div>
       <form
-        className="absolute bg-black p-12 w-3/12 my-36 mx-auto right-0 left-0 text-white rounded-lg bg-opacity-70"
+        className="absolute bg-black p-12 w-9/12 md:w-3/12 my-52 md:my-36 mx-auto right-0 left-0 text-white rounded-lg bg-opacity-70"
         onClick={(e) => e.preventDefault()}
       >
         <h1 className="font-bold text-3xl pb-6">
