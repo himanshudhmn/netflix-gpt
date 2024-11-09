@@ -103,7 +103,7 @@ const Login = (props) => {
         className="absolute bg-black p-6 md:p-12 w-11/12 md:w-3/12 my-44 md:my-36 mx-auto right-0 left-0 text-white rounded-lg bg-opacity-70"
         onClick={(e) => e.preventDefault()}
       >
-        <h1 className="font-bold text-3xl pb-6">
+        <h1 className="font-bold text-2xl md:text-3xl pb-6">
           {isSignIn ? "Sign In" : "Sign Up"}
         </h1>
         {!isSignIn && (

@@ -52,14 +52,18 @@ const Header = (props) => {
     dispatch(changeLanguage(e.target.value));
   };
   return (
-    <div className="absolute px-8 py-2 bg-gradient-to-b from-black w-full z-10 flex flex-col md:flex-row justify-between ">
-      <img className="w-44 mx-auto md:mx-0" src={LOGO} alt="logo" />
+    <div className="absolute px-2 md:px-8 py-2 bg-gradient-to-b from-black w-full z-10 flex flex-row justify-between ">
+      {!user ? (
+        <img className="w-44 mx-auto md:mx-0" src={LOGO} alt="logo" />
+      ) : (
+        <img className="w-32 md:w-44 md:mx-0" src={LOGO} alt="logo" />
+      )}
       {user && (
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between text-xs md:text-lg">
           {showGPTSearch && (
             <select
               onChange={handleLangChange}
-              className="py-2 px-4 rounded-lg my-2 bg-black border-solid border border-gray-500 text-white"
+              className="py-2 px-2 md:px-4 rounded-lg my-2 bg-black border-solid border border-gray-500 text-white"
               value={langPref}
             >
               {laguageSelector.map((lang) => (
@@ -70,15 +74,19 @@ const Header = (props) => {
             </select>
           )}
           <button
-            className="bg-red-600 text-white py-2 px-4 rounded-lg mx-4 my-2"
+            className="bg-red-600 text-white py-2 px-2 md:px-4 rounded-lg mx-2 md:mx-4 my-2"
             onClick={handleGptSearchClick}
           >
             {showGPTSearch ? "Homepage" : "GPT Search"}
           </button>
           <div className="flex">
-            <img className="w-10 h-10 " src={AVATAR} alt="user" />
+            <img
+              className="w-10 h-10 hidden md:inline-block"
+              src={AVATAR}
+              alt="user"
+            />
             <button
-              className="font-bold text-white px-4 cursor-pointer"
+              className="font-bold text-white px-1 md:px-4 cursor-pointer"
               onClick={handleSignOut}
             >
               Sign Out
